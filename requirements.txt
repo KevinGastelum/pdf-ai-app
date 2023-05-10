@@ -1,6 +1,7 @@
 PyPDF2==3.0.1
 python-dotenv==1.0.0
 streamlit==1.22.0
+streamlit-extras==0.77
 tiktoken
 faiss-cpu
 openai
