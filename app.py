@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import os
 import streamlit as st
+from streamlit_extras.stoggle import stoggle
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
@@ -14,6 +15,9 @@ def main():
     load_dotenv()
     st.set_page_config(page_title="Ask your PDF")
     st.header("Kevin's PDF AI 💬")
+    stoggle(
+    "Click me!",
+    """I am a Large Language Model (LLM) trained to analyze PDF files 📚 """)
 
     # upload file
     pdf = st.file_uploader("Upload your PDF", type="pdf")
